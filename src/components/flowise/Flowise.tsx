@@ -4,7 +4,7 @@ import { CssBaseline, StyledEngineProvider } from "@mui/material";
 import themes from "../../themes";
 import NavigationScroll from "../../layout/NavigationScroll";
 import Canvas from "../../views/canvas"; // Direct import without lazy loading
-import Loadable from "./loading/Loadable";
+// import Loadable from "./loading/Loadable";
 import { useEffect } from "react";
 
 const Flowise = () => {

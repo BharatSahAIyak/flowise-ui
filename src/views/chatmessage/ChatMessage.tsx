@@ -22,7 +22,7 @@ import { IconSend } from "@tabler/icons";
 // project import
 import { CodeBlock } from "../../components/flowise/markdown/CodeBlock";
 import { MemoizedReactMarkdown } from "../../components/flowise/markdown/MemoizedReactMarkdown";
-// import SourceDocDialog from '../../components/flowise/dialog/SourceDocDialog'
+import SourceDocDialog from "../../components/flowise/dialog/SourceDocDialog";
 import "./ChatMessage.css";
 
 // api
@@ -464,7 +464,11 @@ export const ChatMessage = ({ open, chatflowid, isDialog }) => {
           </form>
         </div>
       </div>
-      {/* <SourceDocDialog show={sourceDialogOpen} dialogProps={sourceDialogProps} onCancel={() => setSourceDialogOpen(false)} /> */}
+      <SourceDocDialog
+        show={sourceDialogOpen}
+        dialogProps={sourceDialogProps}
+        onCancel={() => setSourceDialogOpen(false)}
+      />
     </>
   );
 };

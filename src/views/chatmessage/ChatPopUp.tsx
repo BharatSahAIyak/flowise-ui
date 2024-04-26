@@ -16,7 +16,7 @@ import { StyledFab } from "../../components/flowise/button/StyledFab";
 import MainCard from "../../components/flowise/cards/MainCard";
 import Transitions from "../../components/flowise/extended/Transitions";
 import { ChatMessage } from "./ChatMessage";
-// import ChatExpandDialog from "./ChatExpandDialog";
+import ChatExpandDialog from "./ChatExpandDialog";
 
 // api
 import chatmessageApi from "../../api/chatmessage";
@@ -215,12 +215,12 @@ export const ChatPopUp = ({ chatflowid }) => {
           </Transitions>
         )}
       </Popper>
-      {/* <ChatExpandDialog
+      <ChatExpandDialog
         show={showExpandDialog}
         dialogProps={expandDialogProps}
         onClear={clearChat}
         onCancel={() => setShowExpandDialog(false)}
-      ></ChatExpandDialog> */}
+      ></ChatExpandDialog>
     </>
   );
 };

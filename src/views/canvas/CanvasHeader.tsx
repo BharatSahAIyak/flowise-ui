@@ -27,8 +27,8 @@ import {
 
 // project imports
 import Settings from "../settings";
-// import SaveChatflowDialog from "../../components/flowise/dialog/SaveChatflowDialog";
-// import APICodeDialog from "../chatflows/APICodeDialog";
+import SaveChatflowDialog from "../../components/flowise/dialog/SaveChatflowDialog";
+import APICodeDialog from "../chatflows/APICodeDialog";
 
 // API
 import chatflowsApi from "../../api/chatflows";
@@ -160,28 +160,30 @@ const CanvasHeader = ({
   return (
     <>
       <Box>
-        {/* <ButtonBase title='Back' sx={{ borderRadius: '50%' }}>
-                    <Avatar
-                        variant='rounded'
-                        sx={{
-                            ...theme.typography.commonAvatar,
-                            ...theme.typography.mediumAvatar,
-                            transition: 'all .2s ease-in-out',
-                            background: theme.palette.secondary.light,
-                            color: theme.palette.secondary.dark,
-                            '&:hover': {
-                                background: theme.palette.secondary.dark,
-                                color: theme.palette.secondary.light
-                            }
-                        }}
-                        color='inherit'
-                        onClick={() =>
-                            window.history.state && window.history.state.idx > 0 ? navigate(-1) : navigate('/', { replace: true })
-                        }
-                    >
-                        <IconChevronLeft stroke={1.5} size='1.3rem' />
-                    </Avatar>
-                </ButtonBase> */}
+        <ButtonBase title="Back" sx={{ borderRadius: "50%" }}>
+          <Avatar
+            variant="rounded"
+            sx={{
+              ...theme.typography.commonAvatar,
+              ...theme.typography.mediumAvatar,
+              transition: "all .2s ease-in-out",
+              background: theme.palette.secondary.light,
+              color: theme.palette.secondary.dark,
+              "&:hover": {
+                background: theme.palette.secondary.dark,
+                color: theme.palette.secondary.light,
+              },
+            }}
+            color="inherit"
+            onClick={() =>
+              window.history.state && window.history.state.idx > 0
+                ? navigate(-1)
+                : navigate("/", { replace: true })
+            }
+          >
+            <IconChevronLeft stroke={1.5} size="1.3rem" />
+          </Avatar>
+        </ButtonBase>
       </Box>
       <Box sx={{ flexGrow: 1 }}>
         {!isEditingFlowName && (
@@ -354,7 +356,7 @@ const CanvasHeader = ({
         onSettingsItemClick={onSettingsItemClick}
         onUploadFile={onUploadFile}
       />
-      {/* <SaveChatflowDialog
+      <SaveChatflowDialog
         show={flowDialogOpen}
         dialogProps={{
           title: `Save New Chatflow`,
@@ -363,12 +365,12 @@ const CanvasHeader = ({
         }}
         onCancel={() => setFlowDialogOpen(false)}
         onConfirm={onConfirmSaveName}
-      /> */}
-      {/* <APICodeDialog
+      />
+      <APICodeDialog
         show={apiDialogOpen}
         dialogProps={apiDialogProps}
         onCancel={() => setAPIDialogOpen(false)}
-      /> */}
+      />
     </>
   );
 };

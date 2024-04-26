@@ -5,6 +5,7 @@ import ReactFlow, {
   Background,
   useNodesState,
   useEdgesState,
+  ControlButton,
 } from "reactflow";
 import "reactflow/dist/style.css";
 
@@ -28,7 +29,7 @@ import CanvasNode from "./CanvasNode";
 import ButtonEdge from "./ButtonEdge";
 import CanvasHeader from "./CanvasHeader";
 import AddNodes from "./AddNodes";
-// import ConfirmDialog from "../../components/flowise/dialog/ConfirmDialog";
+import ConfirmDialog from "../../components/flowise/dialog/ConfirmDialog";
 import { ChatPopUp } from "../chatmessage/ChatPopUp";
 import { flowContext } from "../../store/context/ReactFlowContext";
 
@@ -541,7 +542,7 @@ const Canvas = () => {
             />
           </Toolbar>
         </AppBar>
-        <Box sx={{ pt: "70px", height: "100vh", width: "100%" }}>
+        <Box sx={{ pt: "70px", height: "700px", width: "100%" }}>
           <div className="reactflow-parent-wrapper">
             <div className="reactflow-wrapper" ref={reactFlowWrapper}>
               <ReactFlow
@@ -562,6 +563,7 @@ const Canvas = () => {
               >
                 <Controls
                   style={{
+                    scale: "170%",
                     display: "flex",
                     flexDirection: "row",
                     left: "50%",
@@ -575,7 +577,7 @@ const Canvas = () => {
             </div>
           </div>
         </Box>
-        {/* <ConfirmDialog /> */}
+        <ConfirmDialog />
       </Box>
     </>
   );

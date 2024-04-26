@@ -1,17 +1,14 @@
-import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
-
 import { Dialog, DialogContent, DialogTitle, Button } from "@mui/material";
 import { ChatMessage } from "./ChatMessage";
 import { StyledButton } from "../../components/flowise/button/StyledButton";
 import { IconEraser } from "@tabler/icons";
 
 const ChatExpandDialog = ({ show, dialogProps, onClear, onCancel }) => {
-  const portalElement = document.getElementById("portal");
   const customization = useSelector((state) => state.customization);
 
-  const component = show ? (
+  return show ? (
     <Dialog
       open={show}
       fullWidth
@@ -64,8 +61,6 @@ const ChatExpandDialog = ({ show, dialogProps, onClear, onCancel }) => {
       </DialogContent>
     </Dialog>
   ) : null;
-
-  return createPortal(component, portalElement);
 };
 
 ChatExpandDialog.propTypes = {

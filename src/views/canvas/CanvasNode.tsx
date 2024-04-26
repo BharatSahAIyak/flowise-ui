@@ -9,7 +9,7 @@ import { IconButton, Box, Typography, Divider, Button } from "@mui/material";
 import MainCard from "../../components/flowise/cards/MainCard";
 import NodeInputHandler from "./NodeInputHandler";
 import NodeOutputHandler from "./NodeOutputHandler";
-// import AdditionalParamsDialog from "../../components/flowise/dialog/AdditionalParamsDialog";
+import AdditionalParamsDialog from "../../components/flowise/dialog/AdditionalParamsDialog";
 
 // const
 import { IconTrash, IconCopy } from "@tabler/icons";
@@ -202,11 +202,11 @@ const CanvasNode = ({ data }) => {
           ))}
         </Box>
       </CardWrapper>
-      {/* <AdditionalParamsDialog
+      <AdditionalParamsDialog
         show={showDialog}
         dialogProps={dialogProps}
         onCancel={() => setShowDialog(false)}
-      ></AdditionalParamsDialog> */}
+      ></AdditionalParamsDialog>
     </>
   );
 };
