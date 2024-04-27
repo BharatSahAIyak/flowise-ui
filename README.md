@@ -1,17 +1,26 @@
-<!-- markdownlint-disable MD030 -->
+# test-admin
 
-# Flowise UI
+## Installation
 
-React frontend ui for Flowise.
+Install the application dependencies by running:
 
-![Flowise](https://github.com/FlowiseAI/Flowise/blob/main/images/flowise.gif?raw=true)
-
-Install:
-
-```bash
-npm i flowise-ui
+```sh
+npm install
 ```
 
-## License
+## Development
 
-Source code in this repository is made available under the [MIT License](https://github.com/FlowiseAI/Flowise/blob/master/LICENSE.md).
+Start the application in development mode by running:
+
+```sh
+npm run dev
+```
+
+## Production
+
+Build the application in production mode by running:
+
+```sh
+npm run build
+```
+
