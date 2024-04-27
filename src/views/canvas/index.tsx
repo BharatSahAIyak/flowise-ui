@@ -526,7 +526,7 @@ const Canvas = () => {
       <Box>
         <AppBar
           enableColorOnDark
-          position="fixed"
+          position="relative"
           color="inherit"
           elevation={1}
           sx={{
@@ -542,7 +542,7 @@ const Canvas = () => {
             />
           </Toolbar>
         </AppBar>
-        <Box sx={{ pt: "70px", height: "700px", width: "100%" }}>
+        <Box sx={{ height: "630px", width: "100%" }}>
           <div className="reactflow-parent-wrapper">
             <div className="reactflow-wrapper" ref={reactFlowWrapper}>
               <ReactFlow
@@ -563,7 +563,7 @@ const Canvas = () => {
               >
                 <Controls
                   style={{
-                    scale: "170%",
+                    scale: "180%",
                     display: "flex",
                     flexDirection: "row",
                     left: "50%",
