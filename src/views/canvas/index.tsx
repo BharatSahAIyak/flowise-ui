@@ -542,7 +542,7 @@ const Canvas = () => {
             />
           </Toolbar>
         </AppBar>
-        <Box sx={{ height: "610px", width: "100%" }}>
+        <Box sx={{ height: "calc(100vh - 120px)", width: "100%" }}>
           <div className="reactflow-parent-wrapper">
             <div className="reactflow-wrapper" ref={reactFlowWrapper}>
               <ReactFlow
